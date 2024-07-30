@@ -26,8 +26,8 @@ def main():
                 service = port.find('service').get('name')
                 if args.verbose:
                     results.append(f"{address},{service},{port.get('portid')}")
-            if not args.verbose:
-                results.append(f"{address},{','.join(ports_out)}")
+        if not args.verbose:
+            results.append(f"{address},{','.join(ports_out)}")
 
 
     for result in results:
